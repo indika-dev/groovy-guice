@@ -1,0 +1,25 @@
+/* AUTOMATICALLY GENERATED ON Sat Oct 04 19:37:26 CEST 2008*/
+/* DO NOT EDIT */
+
+grant codeBase "file:/serverCodeBase/restrictedClient" {
+  permission java.util.PropertyPermission "file.encoding", "read";
+};
+
+grant {
+  permission java.lang.RuntimePermission "accessDeclaredMembers";
+  permission java.io.FilePermission "<<ALL FILES>>", "read, write";
+  permission java.util.logging.LoggingPermission "control";
+  permission java.lang.RuntimePermission "setSecurityManager";
+  permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+  permission java.util.PropertyPermission "cglib.debugLocation", "read";
+  permission java.lang.RuntimePermission "getProtectionDomain";
+  permission java.util.PropertyPermission "guice.allow.nulls.bad.bad.bad", "read";
+  permission java.lang.RuntimePermission "createClassLoader";
+  permission groovy.security.GroovyCodeSourcePermission "/groovy/script";
+  permission java.util.PropertyPermission "ANTLR_DO_NOT_EXIT", "read";
+  permission java.util.PropertyPermission "ANTLR_USE_DIRECT_CLASS_LOADING", "read";
+  permission java.util.PropertyPermission "groovyjarjarantlr.ast", "read";
+  permission java.util.PropertyPermission "groovy.ast", "read";
+  permission java.lang.RuntimePermission "setContextClassLoader";
+};
+

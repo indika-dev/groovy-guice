@@ -1,0 +1,22 @@
+grant {
+	permission java.lang.RuntimePermission "accessDeclaredMembers";
+	permission java.lang.RuntimePermission "createClassLoader";
+	permission java.util.PropertyPermission "guice.custom.loader", "read";
+	permission java.util.PropertyPermission "cglib.debugLocation", "read";
+	permission java.lang.RuntimePermission "getProtectionDomain";
+	permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+	permission groovy.security.GroovyCodeSourcePermission "/groovy/script";
+	permission java.util.PropertyPermission "groovyjarjarantlr.ast", "read";
+	permission java.util.PropertyPermission "groovy.ast", "read";
+	permission java.io.FilePermission "<<ALL FILES>>", "read, write, delete";
+	permission groovy.security.GroovyCodeSourcePermission "/serverCodeBase/restrictedClient";
+	
+	permission java.util.PropertyPermission "ANTLR_DO_NOT_EXIT", "read";
+	permission java.util.PropertyPermission "ANTLR_USE_DIRECT_CLASS_LOADING", "read";
+};
+
+grant codeBase "file:/serverCodeBase/restrictedClient" {
+  permission java.util.PropertyPermission "file.encoding", "read, write";
+};
+
+
